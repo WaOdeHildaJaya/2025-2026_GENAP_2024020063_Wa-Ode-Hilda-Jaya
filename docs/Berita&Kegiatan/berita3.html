@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pendaftaran Jalur KIP Kuliah 2026 - Universitas Handayani Makassar</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Merriweather:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style1.css">
+</head>
+<body class="font-sans text-gray-800 bg-brand-light antialiased selection:bg-brand-yellow selection:text-brand-blue flex flex-col min-h-screen">
+
+    <!-- Navbar dibuat solid putih secara default -->
+    <nav id="navbar" class="fixed w-full z-50 bg-white shadow-md py-2 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center">
+                
+                <!-- Logo -->
+                <a href="../index.html#home" class="flex items-center gap-3 z-50 relative group">
+                    <div class="flex items-center gap-3 z-50 relative">
+                    <div class="w-12 h-12 bg-transparent rounded flex items-center justify-center text-brand-blue shadow-lg">
+                        <img src="../assets/Logo_Universitas_Handayani_Makassar.webp" alt="Logo UHM" class="w-10 h-10 object-contain">
+                    </div>
+                    <div class="flex flex-col text-brand-blue">
+                        <span class="font-bold text-xl tracking-wide leading-none font-serif">UHM</span>
+                        <span class="text-[10px] font-medium tracking-widest opacity-80 uppercase">Universitas Handayani Makassar</span>
+                    </div>
+                </div>
+                </a>
+
+                <!-- Menu Desktop -->
+                <div class="hidden lg:flex items-center space-x-8">
+                    <a href="../index.html#home" class="text-brand-dark hover:text-brand-blue text-sm font-semibold transition-colors">Beranda</a>
+                    <a href="../index.html#about" class="text-brand-dark hover:text-brand-blue text-sm font-semibold transition-colors">Tentang Kami</a>
+                    <a href="../fakultas.html" class="text-brand-dark hover:text-brand-blue text-sm font-semibold transition-colors">Fakultas & Prodi</a>
+                    <a href="../berita.html" class="text-brand-blue font-bold text-sm transition-colors border-b-2 border-brand-yellow pb-1">Berita</a>
+                    <a href="../Kontak.html" class="text-brand-dark hover:text-brand-blue text-sm font-semibold transition-colors">Kontak</a>
+                    
+                    <div class="flex items-center gap-6 ml-4 pl-6 border-l border-gray-200">
+                        <button class="text-brand-dark hover:text-brand-blue transition-colors">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                        <a href="../form.html" class="bg-brand-yellow text-brand-dark font-bold px-6 py-2.5 rounded-full hover:bg-yellow-400 transition-all transform hover:-translate-y-0.5 shadow-md text-sm">
+                            Daftar Sekarang <i class="fa-solid fa-arrow-right-long ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Tombol Menu Mobile -->
+                <div class="lg:hidden flex items-center z-50 relative">
+                    <button id="mobile-menu-btn" class="text-brand-dark hover:text-brand-blue focus:outline-none p-2 bg-gray-100 rounded-md border border-gray-200">
+                        <i class="fa-solid fa-bars text-xl" id="menu-icon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Kontainer Menu Mobile -->
+        <div id="mobile-menu" class="lg:hidden absolute top-full left-0 w-full bg-white shadow-2xl border-t border-gray-100">
+            <div class="px-4 py-6 space-y-2 flex flex-col items-center text-center">
+                <a href="../index.html#home" class="w-full block px-3 py-3 text-brand-blue font-semibold hover:bg-brand-light rounded-lg transition-colors">Beranda</a>
+                <a href="../index.html#about" class="w-full block px-3 py-3 text-brand-blue font-semibold hover:bg-brand-light rounded-lg transition-colors">Tentang Kami</a>
+                <a href="../fakultas.html" class="w-full block px-3 py-3 text-brand-blue font-semibold hover:bg-brand-light rounded-lg transition-colors">Fakultas & Prodi</a>
+                <a href="../berita.html" class="w-full block px-3 py-3 bg-brand-light text-brand-blue font-bold rounded-lg border-l-4 border-brand-yellow">Berita</a>
+                <a href="../kontak.html" class="w-full block px-3 py-3 text-brand-blue font-semibold hover:bg-brand-light rounded-lg transition-colors">Kontak</a>
+                <div class="w-full h-px bg-gray-200 my-4"></div>
+                <a href="../form.html" class="w-full inline-block bg-brand-yellow text-brand-dark font-bold px-6 py-3 rounded-full shadow-md text-center">
+                    Daftar Sekarang
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="pt-28 pb-12 bg-white border-b border-gray-200">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            
+            <!-- Breadcrumb -->
+            <nav class="flex text-sm text-gray-500 mb-6" aria-label="Breadcrumb">
+                <ol class="inline-flex items-center space-x-1 md:space-x-3">
+                    <li class="inline-flex items-center">
+                        <a href="../index.html" class="inline-flex items-center hover:text-brand-blue">Beranda</a>
+                    </li>
+                    <li>
+                        <div class="flex items-center">
+                            <i class="fa-solid fa-chevron-right text-xs mx-2 text-gray-400"></i>
+                            <a href="../berita.html" class="hover:text-brand-blue">Berita</a>
+                        </div>
+                    </li>
+                    <li aria-current="page">
+                        <div class="flex items-center">
+                            <i class="fa-solid fa-chevron-right text-xs mx-2 text-gray-400"></i>
+                            <span class="text-gray-400">Pengumuman</span>
+                        </div>
+                    </li>
+                </ol>
+            </nav>
+
+            <!-- Kotak Tanggal -->
+            <div class="absolute top-0 right-4 sm:right-8 bg-gray-100 border border-gray-200 p-3 flex flex-col items-center justify-center min-w-[80px] shadow-sm hidden sm:flex">
+                <span class="text-2xl font-bold text-gray-800 leading-none">5</span>
+                <span class="text-xs text-gray-500 font-semibold tracking-wider mt-1 uppercase">Mei 2026</span>
+            </div>
+
+            <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-brand-dark font-serif leading-tight sm:pr-24">
+                Wujudkan Masa Depan Gemilang, Universitas Handayani Makassar Buka Pendaftaran Jalur KIP Kuliah 2026
+            </h1>
+            
+            <!-- Meta Data Penulis -->
+            <div class="flex flex-wrap items-center gap-4 text-sm text-gray-500 mt-6 pt-6 border-t border-gray-100">
+                <span class="flex items-center gap-2">
+                    <i class="fa-solid fa-user text-brand-blue"></i> by <span class="font-medium text-gray-700">Basri</span>
+                </span>
+                <span class="text-gray-300">|</span>
+                <span class="flex items-center gap-2">
+                    <i class="fa-solid fa-folder text-brand-blue"></i> posted in: <a href="../berita.html" class="text-brand-blue hover:underline">Berita</a>, <a href="#" class="text-brand-blue hover:underline">Informasi Akademik</a>, <a href="#" class="text-brand-blue hover:underline">Pengumuman</a>
+                </span>
+                <span class="text-gray-300">|</span>
+                <span class="flex items-center gap-2">
+                    <i class="fa-regular fa-comments text-brand-blue"></i> 0
+                </span>
+                
+                <!-- Tanggal untuk versi mobile -->
+                <span class="text-gray-300 sm:hidden">|</span>
+                <span class="flex items-center gap-2 sm:hidden text-gray-500">
+                    <i class="fa-regular fa-calendar text-brand-blue"></i> 5 Mei 2026
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <main class="py-10 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Gambar Utama/Poster KIP -->
+            <div class="mb-10 flex flex-col items-center">
+                <div class="rounded-xl overflow-hidden shadow-md border border-gray-200">
+                    <img src="../assets/KIP.jpeg" alt="Poster PMB Jalur KIP Kuliah 2026" class="w-full h-auto object-cover max-w-2xl mx-auto">
+                </div>
+                <p class="text-sm text-center text-gray-500 mt-4 max-w-2xl font-mono">
+                    Informasi lengkap mengenai persyaratan dan alur pendaftaran mahasiswa baru Jalur KIP Kuliah 2026 Universitas Handayani Makassar
+                </p>
+            </div>
+
+            <!-- Isi Artikel -->
+            <div class="article-content text-lg font-light">
+                <p>
+                    <strong class="font-semibold text-brand-dark">Makassar, 5 Mei 2026</strong> – Universitas Handayani Makassar (UHM) secara resmi membuka pendaftaran Penerimaan Mahasiswa Baru (PMB) melalui jalur <strong>KIP Kuliah</strong> untuk tahun akademik 2026. Program ini merupakan bentuk komitmen institusi dalam memberikan akses pendidikan tinggi yang luas bagi lulusan sekolah menengah yang memiliki potensi akademik namun memerlukan dukungan ekonomi.
+                </p>
+
+                <p>
+                    Melalui jalur ini, mahasiswa yang dinyatakan lolos akan mendapatkan fasilitas beasiswa penuh, antara lain:
+                </p>
+                <ul>
+                    <li>
+                        <strong>Kuliah Gratis:</strong> Pembebasan biaya pendidikan mulai dari semester I hingga semester VIII.
+                    </li>
+                    <li>
+                        <strong>Uang Saku:</strong> Mendapatkan bantuan biaya hidup sebesar <strong>Rp 1.100.000,- per bulan</strong>.
+                    </li>
+                </ul>
+
+                <h2>Persyaratan Pendaftaran</h2>
+                <p>
+                    Berdasarkan ketentuan resmi, calon pendaftar wajib memenuhi kriteria berikut:
+                </p>
+                <ul>
+                    <li>Lulusan SMA/SMK/Sederajat pada tahun <strong>2024, 2025, atau 2026</strong>.</li>
+                    <li>Batas usia maksimal pendaftar adalah <strong>21 tahun</strong>.</li>
+                    <li>Memiliki kartu <strong>KIP/KKS/PKH/SKTM</strong> (salah satunya).</li>
+                </ul>
+
+                <h2>Dokumen yang Diupload (Masing-masing 2 lembar)</h2>
+                <p>
+                    Calon mahasiswa diharapkan menyiapkan dokumen pendukung sebagai berikut:
+                </p>
+                <ul>
+                    <li>Fotokopi KTP dan Kartu Keluarga (KK).</li>
+                    <li>Fotokopi Ijazah terakhir atau Surat Keterangan Lulus (SKL).</li>
+                    <li>Pas Foto terbaru (latar merah, pakaian rapi) ukuran 2×3 dan 3×4.</li>
+                    <li>Fotokopi kartu KIP/KKS/PKH atau SKTM.</li>
+                </ul>
+
+                <h2>Tata Cara Pendaftaran</h2>
+                <p>
+                    Proses pendaftaran dilakukan secara daring (online) melalui dua tahapan utama:
+                </p>
+                <ol>
+                    <li>
+                        <strong>Pembuatan Akun KIP:</strong> Silakan membuat akun pendaftaran melalui laman resmi pemerintah di <a href="https://kip-kuliah.kemdikbud.go.id/siswa/pendaftaran/baru" class="text-blue-600 hover:underline break-all" target="_blank">https://kip-kuliah.kemdikbud.go.id/siswa/pendaftaran/baru</a>.
+                    </li>
+                    <li>
+                        <strong>Formulir Penerimaan UHM:</strong> Melanjutkan pengisian formulir pendaftaran internal Universitas Handayani Makassar melalui tautan <a href="https://bit.ly/KIP_UHM2026" class="text-blue-600 hover:underline" target="_blank">https://bit.ly/KIP_UHM2026</a>.
+                    </li>
+                </ol>
+
+                <p>
+                    Bersama Universitas Handayani Makassar mari mencetak masa depan yang lebih cerah dan kompetitif di era digital. Kami mengundang putra-putri terbaik bangsa untuk segera mendaftarkan diri pada jalur KIP Kuliah 2026 dan menjadi pionir teknologi masa depan.
+                </p>
+
+                <!-- Tags -->
+                <div class="mt-10 pt-4 flex flex-wrap gap-2 text-xs text-gray-500">
+                    <i class="fa-solid fa-tags mt-1 mr-1 text-gray-400"></i>
+                    <span class="bg-gray-100 px-3 py-1 rounded-full">Beasiswa Kuliah</span>
+                    <span class="bg-gray-100 px-3 py-1 rounded-full">KIP Kuliah</span>
+                    <span class="bg-gray-100 px-3 py-1 rounded-full">Kuliah Gratis</span>
+                    <span class="bg-gray-100 px-3 py-1 rounded-full">PMB 2026</span>
+                    <span class="bg-gray-100 px-3 py-1 rounded-full">universitas handayani makassar</span>
+                </div>
+            </div>
+
+            <!-- Tombol Bagikan & Navigasi -->
+            <div class="flex flex-col sm:flex-row justify-between items-center mt-8 pt-8 border-t border-gray-200 gap-4">
+                <div class="flex items-center gap-3">
+                    <span class="text-sm font-semibold text-gray-500">Bagikan:</span>
+                    <button class="w-9 h-9 rounded-full bg-blue-600 text-white flex items-center justify-center hover:bg-blue-700 transition"><i class="fa-brands fa-facebook-f text-sm"></i></button>
+                    <button class="w-9 h-9 rounded-full bg-gray-800 text-white flex items-center justify-center hover:bg-gray-900 transition"><i class="fa-brands fa-x-twitter text-sm"></i></button>
+                    <button class="w-9 h-9 rounded-full bg-green-500 text-white flex items-center justify-center hover:bg-green-600 transition"><i class="fa-brands fa-whatsapp text-sm"></i></button>
+                </div>
+                
+                <a href="../berita.html" class="text-brand-blue font-semibold hover:text-brand-dark transition-colors flex items-center gap-2">
+                    <i class="fa-solid fa-arrow-left"></i> Kembali ke Berita
+                </a>
+            </div>
+
+        </div>
+    </main>
+
+   <footer class="bg-brand-dark text-white pt-20 pb-10 border-t-8 border-brand-yellow mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                
+                <!-- Info Kampus -->
+                <div class="lg:col-span-1">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-10 h-10 bg-transparent rounded flex items-center justify-center text-brand-dark font-bold text-xl">
+                             <img img src="../assets/Logo_Universitas_Handayani_Makassar.webp" alt="Logo UHM" class="w-10 h-10 object-contain">
+                        </div>
+                        <span class="font-bold text-2xl font-serif tracking-wider">UHM</span>
+                    </div>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                        Universitas Handayani Makassar. Mencetak SDM Technopreneurship unggul dan berkarakter sejak 1996.
+                    </p>
+                    <!-- Social Links -->
+                    <div class="flex space-x-3">
+                        <a href="https://www.facebook.com/stmikhdy" class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-brand-yellow hover:text-brand-dark transition-all">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a href="https://x.com/UHM_Makassar" class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-brand-yellow hover:text-brand-dark transition-all">
+                            <i class="fa-brands fa-x-twitter"></i>
+                        </a>
+                        <a href="#" class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-brand-yellow hover:text-brand-dark transition-all">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@universitashandayanimakassar" class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-brand-yellow hover:text-brand-dark transition-all">
+                            <i class="fa-brands fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Link Cepat -->
+                <div>
+                    <h4 class="text-lg font-bold mb-6 font-serif text-white flex items-center gap-2">
+                        <i class="fa-solid fa-link text-brand-yellow text-sm"></i> Quick Links
+                    </h4>
+                    <ul class="space-y-3">
+                        <li><a href="../index.html" class="text-gray-400 hover:text-brand-yellow transition-colors text-sm flex items-center gap-2"><i class="fa-solid fa-angle-right text-xs"></i> Beranda</a></li>
+                        <li><a href="../index.html#about" class="text-gray-400 hover:text-brand-yellow transition-colors text-sm flex items-center gap-2"><i class="fa-solid fa-angle-right text-xs"></i> Tentang Kami</a></li>
+                        <li><a href="../fakultas.html" class="text-gray-400 hover:text-brand-yellow transition-colors text-sm flex items-center gap-2"><i class="fa-solid fa-angle-right text-xs"></i> Fakultas & Prodi</a></li>
+                        <li><a href="../berita.html" class="text-brand-yellow hover:text-white transition-colors text-sm font-semibold flex items-center gap-2"><i class="fa-solid fa-angle-right text-xs"></i> Berita</a></li>
+                        <li><a href="../form.html" class="text-gray-400 hover:text-brand-yellow transition-colors text-sm flex items-center gap-2"><i class="fa-solid fa-angle-right text-xs"></i> Pendaftaran Maba</a></li>
+                    </ul>
+                </div>
+
+                <!-- Kontak -->
+                <div class="lg:col-span-2">
+                    <h4 class="text-lg font-bold mb-6 font-serif text-white flex items-center gap-2">
+                        <i class="fa-solid fa-location-dot text-brand-yellow text-sm"></i> Contact Us
+                    </h4>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <ul class="space-y-4">
+                            <li class="flex items-start gap-4">
+                                <div class="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center flex-shrink-0 text-brand-yellow">
+                                    <i class="fa-solid fa-map-location-dot"></i>
+                                </div>
+                                <span class="text-gray-400 text-sm leading-relaxed pt-1">Jl. Adhyaksa Baru No. 1, Panakkukang, Makassar, Sulsel</span>
+                            </li>
+                            <li class="flex items-center gap-4">
+                                <div class="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center flex-shrink-0 text-brand-yellow">
+                                    <i class="fa-solid fa-phone"></i>
+                                </div>
+                                <span class="text-gray-400 text-sm">(0411) 1234567</span>
+                            </li>
+                        </ul>
+                        <ul class="space-y-4">
+                             <li class="flex items-center gap-4">
+                                <div class="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center flex-shrink-0 text-brand-yellow">
+                                    <i class="fa-solid fa-envelope"></i>
+                                </div>
+                                <span class="text-gray-400 text-sm">info@handayani.ac.id</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-gray-500 text-sm">
+                    &copy; 2026 Universitas Handayani Makassar. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script1.js"></script>
+</body>
+</html>
