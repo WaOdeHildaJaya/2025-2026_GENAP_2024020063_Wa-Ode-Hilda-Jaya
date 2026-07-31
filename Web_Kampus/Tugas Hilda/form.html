@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pendaftaran Maba - Universitas Handayani Makassar</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body class="font-sans text-gray-800 bg-gray-50 antialiased min-h-screen flex flex-col">
+
+    <!-- Navbar Minimalis -->
+    <nav class="bg-white shadow-sm py-4 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-2">
+                <i class="fa-solid fa-arrow-left text-brand-blue"></i>
+                <span class="text-brand-blue font-bold">Kembali ke Beranda</span>
+            </a>
+            <div class="flex items-center gap-3 z-50 relative">
+                <div class="w-12 h-12 bg-transparent rounded flex items-center justify-center text-brand-blue shadow-lg">
+                    <img src="assets/Logo_Universitas_Handayani_Makassar.webp" alt="Logo UHM" class="w-10 h-10 object-contain">
+                </div>
+                <div class="font-bold text-brand-blue font-serif text-xl">UHM</div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="py-12 px-4 flex-grow">
+        <div class="max-w-3xl mx-auto">
+            <!-- Header -->
+            <div class="text-center mb-10">
+                <h1 class="text-3xl font-bold font-serif text-brand-dark mb-3">Formulir Pendaftaran Mahasiswa Baru</h1>
+                <p class="text-gray-600">Lengkapi data diri Anda untuk memulai perjalanan menjadi bagian dari UHM.</p>
+            </div>
+
+            <!-- Form -->
+            <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
+                <form action="#" method="POST" class="space-y-6">
+                    <!-- Data Diri -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="space-y-2">
+                            <label class="block text-sm font-semibold text-gray-700">Nama Lengkap</label>
+                            <input type="text" required class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:ring-2 focus:ring-brand-blue focus:border-brand-blue outline-none transition">
+                        </div>
+                        <div class="space-y-2">
+                            <label class="block text-sm font-semibold text-gray-700">Email</label>
+                            <input type="email" required class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:ring-2 focus:ring-brand-blue focus:border-brand-blue outline-none transition">
+                        </div>
+                    </div>
+
+                    <div class="space-y-2">
+                        <label class="block text-sm font-semibold text-gray-700">Pilihan Program Studi</label>
+                        <select required class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:ring-2 focus:ring-brand-blue focus:border-brand-blue outline-none transition">
+                            <option value="">-- Pilih Program Studi --</option>
+                            <optgroup label="Fakultas Ilmu Komputer">
+                                <option>Teknik Informatika</option>
+                                <option>Sistem Informasi</option>
+                                <option>Sistem Komputer</option>
+                            </optgroup>
+                            <optgroup label="Fakultas Hukum & Ilmu Sosial">
+                                <option>Ilmu Hukum</option>
+                                <option>Kewirausahaan</option>
+                                <option>Administrasi Publik</option>
+                            </optgroup>
+                        </select>
+                    </div>
+
+                    <div class="space-y-2">
+                        <label class="block text-sm font-semibold text-gray-700">Asal Sekolah</label>
+                        <input type="text" required class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:ring-2 focus:ring-brand-blue focus:border-brand-blue outline-none transition">
+                    </div>
+
+                    <div class="space-y-2">
+                        <label class="block text-sm font-semibold text-gray-700">Upload Ijazah/Surat Keterangan Lulus (PDF/JPG)</label>
+                        <input type="file" required class="w-full px-4 py-3 rounded-lg border border-gray-200 bg-gray-50 focus:outline-none cursor-pointer">
+                    </div>
+
+                    <div class="pt-4">
+                        <button type="submit" class="w-full bg-brand-blue text-white font-bold py-4 rounded-lg hover:bg-blue-900 transition-all shadow-md hover:shadow-lg">
+                            Kirim Pendaftaran
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer class="text-center py-8 text-gray-400 text-sm">
+        &copy; 2026 Universitas Handayani Makassar.
+    </footer>
+
+    <script src="script1.js"></script>
+</body>
+</html>
